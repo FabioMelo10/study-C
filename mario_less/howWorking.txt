@@ -1,0 +1,81 @@
+// Primeira volta => i=0
+// height = 5
+
+  for (int i = 0; i < 5; i++) //i<5 -> i=0,1
+  {
+    //espaços
+    for (int j = 0; j < 5 - 0 - 1; j++) // j<4 -> j=0,1,2,3
+    { printf(" ");}
+    //hashes
+    for (int j = 0; j < 0 + 1; j++) // j<1 -> j=0
+    {printf("#");}
+    printf("\n");
+  }
+
+// Segunda volta => i=1
+// height = 5
+  for (int i = 1; i < 5; i++) //i<5 -> i++-> 1+1 => i=2 p/proxima volta 
+  {
+    //espaços
+    for (int j = 0; j < 5 - 1 - 1; j++) 
+    // j<3 limite de espaço ,  j=0,1,2 (j deu 3 voltas)
+    // j++ -> volta 1 = 0+1=1, volta 2 = 1+1=2, volta 3 = 2+1=3 (parou pq 3 <3 é falso)
+    { printf(" ");}
+    //hashes
+    for (int j = 0; j < 1 + 1; j++) 
+    // j<2 ->  qtd de hashes impressos, j=0,1 (j deu 2 voltas)
+    // j++, volta 1 = 0+1=1, volta 2 = 1+1=2 (parou pq 2<2 é falso)
+    {printf("#");}
+    printf("\n");
+  }
+
+// terceira volta => i=2
+// height = 5
+  for (int i = 2; i < 5; i++) //i<5 -> i++-> 2+1 => i=3 p/proxima volta 
+  {
+    //espaços
+    for (int j = 0; j < 5 - 2 - 1; j++) 
+    // j<2 limite de espaço, faz 2 espaço " "," ",  j=0,1 (j deu 2 voltas)
+    // j++ -> volta 1 = 0+1=1, volta 2 = 1+1=2, (parou pq 2 <2 é falso)
+    { printf(" ");}
+    //hashes
+    for (int j = 0; j < 2 + 1; j++) 
+    // j<3 ->  qtd de hashes impressos, j=0,1,2 (j deu 3 voltas)
+    // j++, volta 1 = 0+1=1, volta 2 = 1+1=2, volta 3 = 2+1=3 (parou pq 3<3 é falso)
+    {printf("#");}
+    printf("\n");
+  }
+
+// quarta volta => i=3
+// height = 5
+  for (int i = 3; i < 5; i++) //i<5 -> i++-> 3+1 => i=4 p/proxima volta 
+  {
+    //espaços
+    for (int j = 0; j < 5 - 3 - 1; j++) 
+    // j<1 limite de espaço, faz 1 espaço " ",  j=0 (j deu 1 volta)
+    // j++ -> volta 1 = 0+1=1, (parou pq 1 < 1 é falso)
+    { printf(" ");}
+    //hashes
+    for (int j = 0; j < 3 + 1; j++) 
+    // j<4 ->  qtd de hashes impressos, j=0,1,2,3 (j deu 4 voltas)
+    // j++, volta 1 = 0+1=1, volta 2 = 1+1=2, volta 3 = 2+1=3, volta 4 = 3+1=4 (parou pq 4<4 é falso)
+    {printf("#");}
+    printf("\n");
+  }
+
+// quinta volta => i=4
+// height = 5
+  for (int i = 4; i < 5; i++) //i<5 -> i++-> 3+1 => i=5 p/proxima volta, mas não tem pq 5<height -> 5<5 é falso 
+  {
+    //espaços
+    for (int j = 0; j < 5 - 4 - 1; j++) 
+    // j<0 limite de espaço, não tem espaço " ",  
+    // j++ -> (não executa; não há valores de j)
+    { printf(" ");}
+    //hashes
+    for (int j = 0; j < 4 + 1; j++) 
+    // j<5 ->  qtd de hashes impressos, j=0,1,2,3,4 (j deu 5 voltas)
+    // j++, volta 1 = 0+1=1, volta 2 = 1+1=2, volta 3 = 2+1=3, volta 4 = 3+1=4, volta 5 = 4+1=5 (parou pq 5<5 é falso)
+    {printf("#");}
+    printf("\n");
+  }

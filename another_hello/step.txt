@@ -1,0 +1,211 @@
+🚀 Passo 1: Instalar o Compilador GCC no Ubuntu
+Abra o terminal e execute:
+
+bash
+Copy
+Edit
+sudo apt update
+sudo apt install build-essential
+Verifique se está instalado:
+
+bash
+Copy
+Edit
+gcc --version
+Deve aparecer a versão do GCC.
+
+🚦 Passo 2: Primeiro Programa — Hello World
+Crie um arquivo:
+bash
+Copy
+Edit
+nano hello.c
+Escreva o código:
+c
+Copy
+Edit
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}
+Compile e execute:
+bash
+Copy
+Edit
+gcc hello.c -o hello
+./hello
+✅ Saída esperada:
+
+Copy
+Edit
+Hello, World!
+🔢 Passo 3: Variáveis e Tipos de Dados em C
+Principais tipos:
+Tipo	Descrição	Exemplo de uso
+int	Número inteiro	10, -5
+float	Decimal simples	3.14
+double	Decimal preciso	3.141592
+char	Caractere	'a'
+char[]	Cadeia de caracteres	"nome"
+_Bool	Booleano (0 ou 1)	via <stdbool.h>
+
+Exemplo com todos:
+c
+Copy
+Edit
+#include <stdio.h>
+#include <stdbool.h>
+
+int main() {
+    int idade = 25;
+    float altura = 1.75;
+    double peso = 70.5;
+    char inicial = 'F';
+    char nome[] = "Fabio";
+    bool estudando = true;
+
+    printf("Nome: %s\n", nome);
+    printf("Idade: %d anos\n", idade);
+    printf("Altura: %.2f m\n", altura);
+    printf("Peso: %.2lf kg\n", peso);
+    printf("Inicial: %c\n", inicial);
+    printf("Está estudando? %d (1=Sim, 0=Não)\n", estudando);
+
+    return 0;
+}
+➕ Passo 4: Operadores
+Aritméticos: +, -, *, /, %
+
+Relacionais: ==, !=, >, <, >=, <=
+
+Lógicos: &&, ||, !
+
+👉 Exemplo prático:
+
+c
+Copy
+Edit
+int a = 10, b = 5;
+
+printf("Soma: %d\n", a + b);
+printf("Maior? %d\n", a > b);
+printf("E lógico? %d\n", (a > b) && (b > 0));
+⌨️ Passo 5: Entrada e Saída (scanf e printf)
+Exemplo:
+c
+Copy
+Edit
+#include <stdio.h>
+
+int main() {
+    int idade;
+    printf("Digite sua idade: ");
+    scanf("%d", &idade);
+    printf("Sua idade é: %d\n", idade);
+    return 0;
+}
+🔀 Passo 6: Estruturas Condicionais
+c
+Copy
+Edit
+if (idade >= 18) {
+    printf("Maior de idade.\n");
+} else if (idade > 12) {
+    printf("Adolescente.\n");
+} else {
+    printf("Criança.\n");
+}
+Com switch:
+c
+Copy
+Edit
+int opcao;
+printf("Digite 1 ou 2: ");
+scanf("%d", &opcao);
+
+switch (opcao) {
+    case 1:
+        printf("Opção 1 escolhida.\n");
+        break;
+    case 2:
+        printf("Opção 2 escolhida.\n");
+        break;
+    default:
+        printf("Opção inválida.\n");
+}
+🔄 Passo 7: Estruturas de Repetição
+For:
+c
+Copy
+Edit
+for (int i = 1; i <= 5; i++) {
+    printf("%d\n", i);
+}
+While:
+c
+Copy
+Edit
+int i = 1;
+while (i <= 5) {
+    printf("%d\n", i);
+    i++;
+}
+Do...While:
+c
+Copy
+Edit
+int i = 1;
+do {
+    printf("%d\n", i);
+    i++;
+} while (i <= 5);
+📊 Passo 8: Contadores e Acumuladores
+Soma e Média:
+c
+Copy
+Edit
+int n, soma = 0;
+
+for (int i = 1; i <= 5; i++) {
+    printf("Digite um número: ");
+    scanf("%d", &n);
+    soma += n;
+}
+
+printf("Soma: %d\n", soma);
+printf("Média: %.2f\n", soma / 5.0);
+🔥 Passo 9: Fluxogramas
+💡 Use https://www.diagrams.net para desenhar fluxogramas de problemas, exemplo:
+
+🟦 → [Entrada] → 📐 [Processamento] → ✅ [Saída]
+
+Exemplo de fluxograma para média de números:
+
+Início
+
+Ler 5 números
+
+Somar
+
+Calcular média
+
+Mostrar resultado
+
+Fim
+
+🎯 Objetivo desse módulo:
+Você precisa sair dele sabendo:
+
+Declarar variáveis corretamente
+
+Controlar o fluxo com if, else, switch
+
+Usar for, while e do while
+
+Coletar e imprimir dados (scanf, printf)
+
+Criar contadores e acumuladores
+
+Fazer fluxogramas antes de codar
