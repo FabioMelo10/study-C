@@ -8,10 +8,10 @@ int main ()
   float resultado;
   char entrada[2];
 
-  int soma;
-  int divisao;
-  int multiplicacao;
-  int subtracao;
+  bool soma;
+  bool divisao;
+  bool multiplicacao;
+  bool subtracao;
 
   printf("Escolha uma das opção para cálculo: +, -, *, / \n ");
   scanf("%c",&entrada[0]);
